@@ -13,7 +13,7 @@ const Error = (props) => {
         return <div></div>
     return (
         <div class="alert alert-danger" role="alert">
-            Something went wrong
+            Something went wrong, movie is proberly already added.
         </div>
     );
 }

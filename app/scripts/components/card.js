@@ -25,9 +25,7 @@ class Card extends Component {
       // conditional statements for no data
        if (data.vote === 'undefined' || data.vote === 0) {
           data.vote = noData
-        } else {
-          data.vote = data.vote + ' / 10'
-        };
+        } 
 
       if (totalRevenue === 'undefined' || totalRevenue === 0) {
            totalRevenue = noData
@@ -56,7 +54,7 @@ class Card extends Component {
                 <div className="col-xs-6"> Original Release: <span className="meta-data">{data.release}</span></div>
                 <div className="col-xs-6"> Running Time: <span className="meta-data">{data.runtime} mins</span> </div>
                 <div className="col-xs-6"> Box Office: <span className="meta-data">{totalRevenue}</span></div>
-                <div className="col-xs-6"> Vote Average: <span className="meta-data">{data.vote}</span></div>
+                <div className="col-xs-6"> Vote Average: <span className="meta-data">{data.vote && data.vote + ' / 10'}</span></div>
               </div>
             </div>
             <button  onClick={handleClick} type="button" className="btn btn-primary">Request movie</button>
