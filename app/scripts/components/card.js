@@ -7,10 +7,8 @@ class Card extends Component {
 
   render() {
     let data = this.props.data
+    let handleClick = this.props.handleClick
       // if movie ID found, then...
-
-
-
       let posterIMG = 'https://image.tmdb.org/t/p/w500' + data.poster,
           production = data.production,
           productionCountries = data.production_countries,
@@ -61,6 +59,7 @@ class Card extends Component {
                 <div className="col-xs-6"> Vote Average: <span className="meta-data">{data.vote}</span></div>
               </div>
             </div>
+            <button  onClick={handleClick} type="button" className="btn btn-primary">Request movie</button>
           </div>
           <div className="poster-container nopadding col-xs-12 col-md-4 pull-md-8 col-lg-5 pull-lg-7 ">
             <img id="postertest" className='poster' src={posterIMG}/>
@@ -72,6 +71,7 @@ class Card extends Component {
     document.body.style.backgroundImage = 'url(' + backdropIMG + ')';
   }
 }
+
 
 
 function nestedDataToString(nestedData) {
