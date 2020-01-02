@@ -18,11 +18,13 @@
   "dependencies": {
     "bloodhound-js": "^1.2.1",
     "bower": "^1.8.8",
+    "dotenv": "^8.2.0",
     "es6-promise": "^4.0.5",
     "fetch-ie8": "^1.4.3",
     "numeral": "^1.4.5",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
+    "react-scripts": "^3.3.0",
     "typeahead": "^0.2.2",
     "whatwg-fetch": "^2.0.1"
   },

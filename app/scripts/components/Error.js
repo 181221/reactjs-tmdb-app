@@ -12,7 +12,7 @@ const Error = (props) => {
     if (hide)
         return <div></div>
     return (
-        <div class="alert alert-danger" role="alert">
+        <div className="alert alert-danger" role="alert">
             Something went wrong, movie is proberly already added.
         </div>
     );

@@ -14,7 +14,7 @@ class SearchBox extends Component {
             <a
               href="./"
               title="ReactJS TMDb Movie Search"
-              onclick="ga('send', 'event', 'link', 'internal', 'TMDB logo')"
+              onClick="ga('send', 'event', 'link', 'internal', 'TMDB logo')"
             >
               <img src={TMDBLogo} className="logo" alt="The Movie Database" />
             </a>

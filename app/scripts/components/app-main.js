@@ -5,6 +5,7 @@ import Error from './Error'
 import Success from './Success'
 
 
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -40,15 +41,30 @@ class App extends Component {
     
     fetch("http://localhost:7878/api/movie?apikey=6901fefa79cb4b07b57a6d3f786f7b67", options)
       .then(response => response.json())
-      .then(json => this.setState({...this.state, success: true, error: undefined, response:json}))
-      .catch(err => this.setState({
+      .then(json => {this.setState({...this.state, success: true, error: undefined, response:json})
+        setTimeout(() => {
+          this.setState({
+            success: undefined
+          })
+        }, 5000);
+      })
+      .catch(err => {this.setState({
         ...this.state,
         error: true,
         success:undefined
-      }))   
+       })
+       setTimeout(() => {
+        this.setState({
+          error: undefined
+        })
+       }, 5000);
+
+    })   
   }
   
   render() {
+    console.log("this.state", this.state)
+    console.log(process.env.TEST)
     return (
       <div>   
         {this.state.error && 
